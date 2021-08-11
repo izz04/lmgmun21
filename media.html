@@ -1,0 +1,738 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MEDIA</title>
+	<style>
+	.logo{
+				height:30px;
+			
+			align-self:center;
+		}
+		* {
+    margin: 0;
+    padding: 0;
+}#videos-internas-popup {
+    
+}
+
+#videos-internas-popup .text-videos-relacionados p{
+    margin: 0;
+}
+
+#videos-internas-popup .text-videos-relacionados{
+    position: relative;
+}
+#videos-internas-popup .text-videos-relacionados .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: left;
+  height: 1.5em;
+}
+#videos-internas-popup .text-videos-relacionados .hr-text:before {
+  content: '';
+  background: #e61672;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 90%;
+  height: 1px;
+}
+#videos-internas-popup .text-videos-relacionados p {
+  /*content: attr(data-content);*/
+    position: absolute;
+    display: inline-block;
+    top: -8px;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #3a3e52;
+    background-color: #fff;
+    font-family: AmpleSoft-Regular,sans-serif;
+    font-size: 20px;
+}
+
+#videos-internas-popup .text-videos-relacionados .circle-back {
+    background: white;
+    width: 15px;
+    height: 15px;
+    border: solid 1px #e61672;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 1px;
+    border-top-width: 1px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+
+#videos-internas-popup .text-videos-relacionados .circle-front1 {
+    /* background: #fff; */
+    /* width: 11px; */
+    /* height: 10px; */
+    /* border: solid 1px #fff; */
+    /* border-radius: 50%; */
+    /* position: absolute; */
+    /* bottom: -2px; */
+    /* right: -2px; */
+}
+
+#videos-internas-popup .text-videos-relacionados .circle-front2 {
+    background: #e61672;
+    width: 7px;
+    height: 7px;
+    border: solid 1px #e61672;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+
+#videos-internas-popup .contenedor-imagen-video{
+    position: relative;
+    width: 100%;
+    height: auto;    
+}
+#videos-internas-popup .contenedor-imagen-video{
+    position: relative;
+    width: 100%;
+    height: auto;    
+}
+
+#videos-internas-popup .contenedor-imagen-video .overlay-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    color: rgba(255,255,255,.6);
+    font-size: 5em;
+    cursor: pointer;
+}
+
+#videos-internas-popup .contenedor-imagen-video .overlay-video .icon-position{
+    position: absolute;
+    top: 33%;
+    left: 41%;
+}
+
+#videos-internas-popup img {
+    width: 100%;
+    height: auto;
+}
+
+#videos-internas-popup .pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    z-index: 999;
+}
+
+.activar-popup {
+    visibility: visible !important;
+}
+.pop-up-box{
+    position: relative;
+    top: 25%;
+    width: 60%;
+    min-height: 400px;
+    margin: auto;
+    background: black;
+    padding: 0;
+}
+@media  (max-width: 480px){.pop-up-box {
+	
+    width: 70%;
+    min-height: 200px;}}
+
+
+.pop-up-box .close-btn{
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    cursor: pointer;
+}
+
+.pop-up-box iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+iframe {
+    display:block;
+    width:100%;
+}
+	</style>
+	<!--  
+    JavaScripts
+    =============================================
+    -->
+    <script src="assets/lib/jquery/dist/jquery.js"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/lib/wow/dist/wow.js"></script>
+    <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+    <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
+    <script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
+    <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+ 	
+    <!--  
+    Favicons
+    =============================================
+    -->
+
+    <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+    <!--  
+    Stylesheets
+    =============================================
+    
+    -->
+    <!-- Default stylesheets-->
+    <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800" rel="stylesheet">
+    <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
+    <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+    <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
+    <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link href="assets/css/extraaboutstyles.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+	<style>
+#video-popup-container2 {
+  display:none;
+  position: fixed;
+  z-index: 996;
+  width: 60%;
+  left: 50%;
+  margin-left: -30%;
+  top: 20%;
+  background-color: #fff;
+}
+
+#video-popup-close {
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 998;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #000;
+  line-height: 25px;
+  color: #fff;
+}
+
+#video-popup-iframe-container2 {
+  position: absolute;
+  z-index: 997;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border: 2px solid #000;
+  border-radius: 2px;
+  background-color: #000;
+}
+
+#video-popup-iframe {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+}
+
+#video-popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 995;
+  top: 0;
+  background-color: #000;
+  opacity: 0.8;
+  width: 90%;
+  height: 100%;
+}
+
+#video-popup-close:hover {
+  color: #DE0023;
+}</style>
+</head>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    <main>
+      <div class="page-loader">
+        <div id="bm"> </div>
+      </div>
+        <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.php">LMGMUN <span><img src="Untitled-1.svg" class="logo"></span></a>
+          </div>
+          <div class="collapse navbar-collapse" id="custom-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.php">Home</a>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" href="aboutlmgmun.php" data-toggle="dropdown">About</a>
+               <ul class="dropdown-menu"  role="menu">
+				   	  <li><a href="aboutlmgmun.php">LMGMUN</a></li>
+                      <li><a href="aboutschool.php">School</a></li>
+                      <li style="display: none"><a href="aboutthesecretariat.php">The Secretariat</a></li>
+				      <li><a href="aboutconferenceschedule.php">Conference Resources</a></li>
+                    </ul>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">COMMITTEES</a>
+               <ul class="dropdown-menu"  role="menu">
+                      <li><a href="c-sochum/sochum.html" target="_blank">UNGA</a></li>
+                      <li><a href="c-hrc/hrc.html" target="_blank">UNHRC</a></li>
+                      <li><a href="c-unep/unep.html" target="_blank">UNEP</a></li>
+                      <li><a href="c-unsc/unsc.html" target="_blank">UNSC</a></li>
+                      <li><a href="c-copuos/copuos.html" target="_blank">COPUOS</a></li>
+                      <li><a href="c-scc/scc.html" target="_blank">SCC</a></li>
+                      <li><a href="c-jcc/jcc.html" target="_blank">JCC</a></li>
+                    </ul>
+              </li>
+              <li><a href="internationalpress.html">International Press</a>
+              </li>
+			  <li><a href="register.html">Register</a>
+              </li>
+              <li class="dropdown"><a class="dropdown-toggle" href="media.html" data-toggle="dropdown">Media</a>
+                    <ul class="dropdown-menu"  role="menu">
+                      <li><a class="section-scroll" href="media.html">Gallery</a></li>
+                      <li><a class="section-scroll" href="media.html">Videos</a></li>
+                    </ul>
+              </li>
+              <li><a href="contactus.html">Contact Us</a>
+              </li>
+			  </ul>
+          </div>
+        </div>
+      </nav>
+	  <section class="home-section home-full-height photography-page" id="home">
+        <div class="hero-slider">
+          <ul class="slides">
+            <li class="bg-dark" style="background-image:url(assets/images/bg3.jpg)">
+              <div class="titan-caption">
+          		<div class="caption-content">
+            	<div class="font-alt mb-30 titan-title-size-1"></div>
+				<div class="headcon">MEDIA
+          		</div>
+                </div>
+              </div>
+            </li>
+            <li class="bg-dark" style="background-image:url(assets/images/about_bg.jpg)">
+              <div class="titan-caption">
+          		<div class="caption-content">
+            	<div class="font-alt mb-30 titan-title-size-1"></div>
+				<div class="headcon">MEDIA
+          		</div>
+                </div>
+              </div>
+            </li>
+            <li class="bg-dark" style="background-image:url(assets/images/bg1.JPG)">
+              <div class="titan-caption">
+          		<div class="caption-content">
+            	<div class="headcon">MEDIA
+          		</div>
+                </div>
+              </div>
+            </li>
+            <li class="bg-dark" style="background-image:url(assets/images/bg2.jpg)">
+              <div class="titan-caption">
+          		<div class="caption-content">
+            	<div class="font-alt mb-30 titan-title-size-1"></div>
+				<div class="headcon">MEDIA
+          		</div>
+                </div>
+              </div>
+            </li>
+            <li class="bg-dark" style="background-image:url(assets/images/bg4.jpeg)">
+              <div class="titan-caption">
+          		<div class="caption-content">
+            	<div class="font-alt mb-30 titan-title-size-1"></div>
+				<div class="headcon">MEDIA
+          		</div>
+                </div>
+              </div>
+            </li>
+      
+          </ul>
+        </div>
+      </section>
+		
+        
+		
+		<br><br><br>
+      <section class="module pb-0" id="works">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">GALLERY</h2>
+                <div class="module-subtitle font-serif"></div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <ul class="filter font-alt" id="filters">
+                  <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".2016" data-wow-delay="0.2s">2016</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".2017" data-wow-delay="0.4s">2017</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".2018" data-wow-delay="0.6s">2018</a></li>
+                  <li><a class="wow fadeInUp" href="#" data-filter=".2019" data-wow-delay="0.6s">2019</a></li>
+                </ul>
+              </div>
+            </div>
+          <ul class="works-grid works-grid-3 works-grid-gut works-hover-d" id="works-grid">
+              <li class="work-item 2019">
+                  <div class="work-image"><img src="PICS/1_2019.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2019</h3>
+                  </div></li>
+                       <li class="work-item 2016">
+                  <div class="work-image"><img src="PICS/5_2016.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt"><h3 class="work-title">2016</h3>
+                  </div></li>
+                   
+                            <li class="work-item 2017">
+                  <div class="work-image"><img src="PICS/1_2017.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2017</h3>
+                  </div></li>
+                    <li class="work-item 2018">
+                  <div class="work-image"><img src="PICS/1_2018.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2018</h3>
+                  </div></li>
+                  <li class="work-item 2019">
+                  <div class="work-image"><img src="PICS/2_2019.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2019</h3>
+                  </div></li>
+                  
+                   <li class="work-item 2016">
+                  <div class="work-image"><img src="PICS/1_2016.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2016</h3>
+                  </div></li>
+                 
+            
+              <li class="work-item 2017">
+                  <div class="work-image"><img src="PICS/5_2017.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2017</h3>
+                  </div></li>
+              <li class="work-item 2018">
+                  <div class="work-image"><img src="PICS/4_2018.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2018</h3>
+                  </div></li>
+                  <li class="work-item 2019">
+                  <div class="work-image"><img src="PICS/3_2019.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2019</h3>
+                  </div></li>
+                       <li class="work-item 2016">
+                  <div class="work-image"><img src="PICS/2_2016.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt"><h3 class="work-title">2016</h3>
+                  </div></li>
+                  <li class="work-item 2019">
+                  <div class="work-image"><img src="PICS/4_2019.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2019</h3>
+                  </div></li>
+                  
+                  <li class="work-item 2017">
+                  <div class="work-image"><img src="PICS/2_2017.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2017</h3>
+                  </div></li>
+                  <li class="work-item 2018">
+                  <div class="work-image"><img src="PICS/3_2018.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2018</h3>
+                  </div></li>
+               
+          
+              <li class="work-item 2017">
+                  <div class="work-image"><img src="PICS/4_2017.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2017</h3>
+                  </div></li>
+                     <li class="work-item 2018">
+                  <div class="work-image"><img src="PICS/5_2018.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2018</h3>
+                  </div></li>
+                       <li class="work-item 2016">
+                  <div class="work-image"><img src="PICS/6_2016.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt"><h3 class="work-title">2016</h3>
+                  </div></li>
+                  <li class="work-item 2019">
+                  <div class="work-image"><img src="PICS/5_2019.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2019</h3>
+                  </div></li>
+                  
+                      <li class="work-item 2016">
+                  <div class="work-image"><img src="PICS/4_2016.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt"><h3 class="work-title">2016</h3>
+                  </div></li>
+                    <li class="work-item 2018">
+                  <div class="work-image"><img src="PICS/6_2018.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2018</h3>
+                  </div></li>  
+                   <li class="work-item 2017">
+                  <div class="work-image"><img src="PICS/6_2017.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2017</h3>
+                  </div></li>
+                          <li class="work-item 2017">
+                  <div class="work-image"><img src="PICS/3_2017.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2017</h3>
+                  </div></li>
+                        <li class="work-item 2018">
+                  <div class="work-image"><img src="PICS/2_2018.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2018</h3>
+                  </div></li>
+              <li class="work-item 2019">
+                  <div class="work-image"><img src="PICS/6_2019.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt">
+                    <h3 class="work-title">2019</h3>
+                  </div></li>
+                  <li class="work-item 2016">
+                  <div class="work-image"><img src="PICS/3_2016.jpg" alt="Portfolio Item"/></div>
+                  <div class="work-caption font-alt"><h3 class="work-title">2016</h3>
+                  </div></li>
+           
+            
+        
+           
+                
+                   
+            </ul>
+		  </div>
+        </section>
+		
+		<br><br><br>
+		<br><br><br>
+		<section class="module" id="alt-features">
+		  <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                <h2 class="module-title font-alt">VIDEOS</h2><br><br>
+                <div class="module-subtitle font-serif"></div>
+              </div>
+            </div>
+          </div>
+          <div align="center">
+          <div style="width:90%">
+            
+				<div id="videos-internas-popup">
+        <div class="boxup-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="contenedor-imagen-video" id="video-1">
+                        <div class="overlay-video"><i class="fa fa-play-circle-o icon-position"></i></div>
+                        <img src="https://img.youtube.com/vi/auZlDwM3078/0.jpg">
+                    </div>
+					<br><font size="4" face="Montserrat">LMGMUN 2019 | Trailer 1</font>
+                </div>
+                <div class="col-md-3">
+                    <div class="contenedor-imagen-video" id="video-2">
+                        <div class="overlay-video"><i class="fa fa-play-circle-o icon-position"></i></div>
+                        <img src="https://img.youtube.com/vi/mmScsFn68Ug/0.jpg">
+                    </div>
+					<br><font size="4" face="Montserrat">LMGMUN 2019 | Trailer 2</font>
+                </div>
+                <div class="col-md-3">
+                    <div class="contenedor-imagen-video" id="video-3">
+                        <div class="overlay-video"><i class="fa fa-play-circle-o icon-position"></i></div>
+                        <img src="https://img.youtube.com/vi/uTuz_45OwPI/0.jpg">
+                    </div>
+					<br><font size="4" face="Montserrat">LMGMUN 2019 | Opening Video</font>
+                </div>
+                <div class="col-md-3">
+                    <div class="contenedor-imagen-video" id="video-4">
+                        <div class="overlay-video"><i class="fa fa-play-circle-o icon-position"></i></div>
+                        <img src="https://img.youtube.com/vi/kU7-QXt0W_M/0.jpg">
+                    </div>
+					<br><font size="4" face="Montserrat">LMGMUN 2019 | Closing Video</font>
+                </div>
+            </div>
+        </div>
+        <div class="pop-up" id="popup-video-1">
+            <div class="pop-up-box">
+                <i class="fa fa-times-circle-o close-btn" aria-hidden="true"></i>
+                <iframe src="https://www.youtube.com/embed/auZlDwM3078?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="pop-up" id="popup-video-2">
+            <div class="pop-up-box">
+                <i class="fa fa-times-circle-o close-btn" aria-hidden="true"></i>
+                <iframe src="https://www.youtube.com/embed/mmScsFn68Ug?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="pop-up" id="popup-video-3">
+            <div class="pop-up-box">
+                <i class="fa fa-times-circle-o close-btn" aria-hidden="true"></i>
+                <iframe src="https://www.youtube.com/embed/uTuz_45OwPI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="pop-up" id="popup-video-4">
+            <div class="pop-up-box">
+                <i class="fa fa-times-circle-o close-btn" aria-hidden="true"></i>
+                <iframe src="https://www.youtube.com/embed/kU7-QXt0W_M?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+			
+		<br><br><div id="videos-internas-popup">
+        <div class="boxup-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="contenedor-imagen-video" id="video-5">
+                        <div class="overlay-video"><i class="fa fa-play-circle-o icon-position"></i></div>
+                        <img src="https://img.youtube.com/vi/Z6JR2cHHL2E/0.jpg">
+                    </div>
+					<br><font size="4" face="Montserrat">LMGMUN 2020 | Trailer 1</font>
+                </div>
+                <div class="col-md-3">
+                    <div class="contenedor-imagen-video" id="video-6">
+                        <div class="overlay-video"><i class="fa fa-play-circle-o icon-position"></i></div>
+                        <img src="https://img.youtube.com/vi/FWeOpQZXmOc/0.jpg">
+                    </div>
+					<br><font size="4" face="Montserrat">LMGMUN 2018 | Opening Video</font>
+                </div>
+            </div>
+        </div>
+        <div class="pop-up" id="popup-video-5">
+            <div class="pop-up-box">
+                <i class="fa fa-times-circle-o close-btn" aria-hidden="true"></i>
+                <iframe src="https://www.youtube.com/embed/Z6JR2cHHL2E?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="pop-up" id="popup-video-6">
+            <div class="pop-up-box">
+                <i class="fa fa-times-circle-o close-btn" aria-hidden="true"></i>
+                <iframe src="https://www.youtube.com/embed/FWeOpQZXmOc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+			  
+			  </div> 
+			
+          </div>
+        </section>
+          
+		<br><br><br>
+		<div class="module-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">LMGMUN</h5>
+                  <p>Conference Dates: 26<sup>th</sup>-28<sup>th</sup> June, 2020.</p><p>The orientation ceremony will be held on 25<sup>th</sup> May, 2020.</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">FIND US</h5>
+                  <p><a href="https://m.facebook.com/lmgmun/">Facebook</a></p><p>Email: <a href="mailto: secretariat@lmgmun.org">secretariat@lmgmun.org</a></p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">WHERE TO FIND US</h5>
+                  <p>La Martiniere Girls' College,<br>Rana Pratap Marg, Hazratganj<br>Lucknow-226001, Uttar Pradesh.</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">REGISTER</h5>
+                  <p><a href="register.html">Register here.</a></p><p>Hope to see you at La Martiniere Girls' Model United Nations 2020.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="divider-d">
+        <footer class="footer bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2020&nbsp;<a href="index.php">LMGMUN</a>, All Rights Reserved</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="footer-social-links"><font color="#5B5757">Designed by Isha Zaheer & Kulsoom Rizavi</font>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://m.facebook.com/lmgmun/"><i class="fa fa-facebook"></i></a><a href="http://instagram.com/lmgmun"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+<div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+</main>
+   
+ <script src="assets/js/lottie.js"></script>
+  <script src="assets/js/loader.js"></script>
+ <script> $(function() {
+            $('#video-1').click(function(e) {
+                e.stopPropagation();
+                $('#popup-video-1').addClass('activar-popup');
+            });
+            $('#video-2').click(function(e) {
+                e.stopPropagation();
+                $('#popup-video-2').addClass('activar-popup');
+            });
+            $('#video-3').click(function(e) {
+                e.stopPropagation();
+                $('#popup-video-3').addClass('activar-popup');
+            });
+            $('#video-4').click(function(e) {
+                e.stopPropagation();
+                $('#popup-video-4').addClass('activar-popup');
+            });
+		 $('#video-5').click(function(e) {
+                e.stopPropagation();
+                $('#popup-video-5').addClass('activar-popup');
+            });
+		 $('#video-6').click(function(e) {
+                e.stopPropagation();
+                $('#popup-video-6').addClass('activar-popup');
+            });
+            $('.close-btn').click(function(e) {
+                e.stopPropagation();
+                $('#popup-video-1,#popup-video-2,#popup-video-3,#popup-video-4,#popup-video-5,#popup-video-6').removeClass('activar-popup');
+            });
+        });</script> 
+</body>
+</html>
