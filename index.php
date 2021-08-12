@@ -153,7 +153,7 @@ html, body{
          <div class="headcon">LMGMUN <span class="rotate"> <strong>2021 | 2021</strong></span></div><br>
      	 </div>
 		</div>
-			</section>
+		</section>
    </main>
     
  <script src="assets/js/lottie.js"></script>
